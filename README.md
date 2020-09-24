@@ -15,7 +15,7 @@ Let begin building our service.
 
 ### Architecture
 
-![Image](architecture.png)
+![Image](https://raw.githubusercontent.com/brudex/sms_gateway_rabbitMq/master/architecture.jpg)
 
 The above show the design of our sms gateway. In the above service our web api receives all requests and forwards theme to our message queue(rabbitmq). Since all this api is doing is forwarding messages it has a high throughput and can gracefully handle as about 10 requests per second running a single instance. In future when this api reaches its threshhold we can run multiple instances in a docker swarm or use a software load balancer like [pm2](https://pm2.keymetrics.io/) to handle the proverbial 100 requests per second.
 
