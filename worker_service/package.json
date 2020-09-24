@@ -1,0 +1,36 @@
+{
+    "name": "nodeapp",
+    "version": "0.0.1",
+    "private": true,
+    "main": "app.js",
+    "scripts": {
+        "start": "node app.js",
+        "test": "NODE_ENV=test mocha --recursive test",
+        "test:coverage": "nyc npm test",
+        "test:unit": "mocha --recursive test/middleware test/models test/routes",
+        "test:integration": "mocha --recursive test/integration"
+    },
+    "dependencies": {
+        "amqplib": "^0.6.0",
+        "body-parser": "^1.13.3",
+        "compression": "^1.5.2",
+        "express": "^4.13.3",
+        "glob": "^6.0.4",
+        "lodash": "^4.17.20",
+        "method-override": "^2.3.0",
+        "mongoose": "^4.1.2",
+        "morgan": "^1.6.1",
+        "serve-favicon": "^2.3.0"
+    },
+    "devDependencies": {
+        "chai": "^3.5.0",
+        "debug": "^2.2.0",
+        "gulp": "^3.9.0",
+        "gulp-nodemon": "^2.0.2",
+        "gulp-livereload": "^3.8.0",
+        "gulp-plumber": "^1.0.0",
+        "mocha": "^4.0.1",
+        "nyc": "^10.0.0",
+        "supertest": "^2.0.0"
+    }
+}
